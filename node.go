@@ -60,6 +60,11 @@ func (node Node) Feature() string {
 	return C.GoString(node.node.feature)
 }
 
+// PosId returns the unique part of speech id
+func (node Node) PosId() int {
+	return int(node.node.posid)
+}
+
 // Length returns the length of the surface string.
 func (node Node) Length() int {
 	return int(node.node.length)
